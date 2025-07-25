@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Heart Disease Prediction</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <form id="predictionForm">
+        <label>Age: <input type="number" id="age" required></label>
+        <label>Sex (0 = Female, 1 = Male): <input type="number" id="sex" required></label>
+        <label>CP (Chest Pain Type): <input type="number" id="cp" required></label>
+        <label>Resting BP: <input type="number" id="trestbps" required></label>
+        <label>Cholesterol: <input type="number" id="chol" required></label>
+        <label>Fasting Blood Sugar (0/1): <input type="number" id="fbs" required></label>
+        <label>Rest ECG: <input type="number" id="restecg" required></label>
+        <label>Max Heart Rate: <input type="number" id="thalach" required></label>
+        <label>Exercise Angina (0/1): <input type="number" id="exang" required></label>
+        <label>Oldpeak: <input type="number" step="0.1" id="oldpeak" required></label>
+        <label>Slope: <input type="number" id="slope" required></label>
+        <label>CA: <input type="number" id="ca" required></label>
+        <label>Thal: <input type="number" id="thal" required></label>
+        
+        <button type="button" onclick="predict()">Predict</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Prediction Result -->
+    <h2 id="result"></h2>
+
+    <!-- Chart Canvas -->
+    <div style="max-width: 500px; margin: 20px auto;">
+        <canvas id="resultChart"></canvas>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

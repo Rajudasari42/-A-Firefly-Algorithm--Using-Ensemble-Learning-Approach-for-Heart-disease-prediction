@@ -1,0 +1,139 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #ff1744;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+form {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    text-align: left;
+    max-width: 420px;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+/* Form hover effect */
+form:hover {
+    transform: scale(1.02);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #2e2e2e;
+    color: #ffffff;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Input focus effect */
+input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 15px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Prediction Result */
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show result */
+#result.show {
+    opacity: 1;
+}
+
+/* High Risk = Red, Low Risk = Green */
+.high-risk {
+    color: #ff1744;
+}
+
+.low-risk {
+    color: #00e676;
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: none;
+}
+
+#progress-bar::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #007bff;
+    animation: progress 1s forwards;
+}
+
+/* Progress Animation */
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+}
